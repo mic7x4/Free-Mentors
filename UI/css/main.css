@@ -31,7 +31,7 @@ body{
     color: #333;
     opacity: 0.9;
 }
-.f-form input[type="text"],.f-form input[type="password"]{
+.f-form input[type="text"],.f-form input[type="password"],.f-form input[type="email"]{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -59,7 +59,7 @@ body{
 
 @media screen and (max-width:823px){
     .container{
-        margin-top: 100px;
+        margin-top: 50px;
         padding: 0 20px 0 20px;
         
     }
