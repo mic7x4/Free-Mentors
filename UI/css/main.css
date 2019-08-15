@@ -4,34 +4,326 @@ body{
     margin: 0;
     padding: 0;
 }
+/* index */
 
-/* Global */
+#showcase{
+    background-image: linear-gradient(rgba(6, 13, 41, 0.1), #001),
+    url("../images/pagelanding.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 250px 300px;
+    width: 100%;
+    height:100;
+    
+}
+#showcase h1{
+    color: #fff;
+    font-weight: 900;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 0px;
+}
+#showcase h4{
+    color: #fff;
+    font-weight :900;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 20px 0 20px;
+    line-height: 1.8;
+    width: 100%;
+    
+}
+#showcase .joinin{
+    font-size: 18px;
+    border:#fff 1px solid;
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-top: 5px;
+    background-color:rgb(238, 44, 44);
+    padding: 0 auto;
+    align-content: center;
+
+}
+#showcase .joinin:hover{
+    opacity: 0.8;
+}
+
+/* All Mentors */
+* {
+    box-sizing: border-box;
+}
+
+/* Start of the Header codes  */
 .container{
-    margin-top: 150px;
-    padding: 0 90px 0 90px;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 9px;
+
+}
+.signin-container{
+    width: 80%;
+    margin:0 auto;
+    overflow: hidden;
+    padding-top: 9px;
+    margin-top: 200px;
+}
+.signup-container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 9px;
+}
+ul{
+    padding: 0;
+    margin: 0;
+
+}
+
+header{
+    background-color:#333;
+    color:white;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom:#fff solid 3px;
+
+}
+header .fixed{
+    position: fixed;
+}
+header button{
+    width: 100px;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #fff;
+    background-color:#6f6f6f;
+}
+
+header h1{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+header .logo{
+    color: #fff;
+    text-decoration:none;
+    font-size: 30px;
+}
+header a{
+    color: #fff;
+    text-decoration:none;
+    font-size: 16px;
+}
+header a:hover{
+    opacity: 0.9;
+}
+header li{
+    float: left;
+    display: inline;
+    padding: 0 10px 0 10px;
+}
+header #branding{
+    float: left;
+}
+header #branding{
+    margin: 0;
+}
+header nav{
+    float:right;
+    margin-top: 20px;
+}
+
+/* Ends of the Header codes */
+
+img{
+    max-width: 90%;
+    height: auto;
+    padding-top: 10px;
+    border-radius:30px;
+}
+
+.column{
+    width: 25%;
+    float: left;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+}
+
+row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width:600px){
+    .column{
+        width:100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .card{
+        margin: auto;
+    }
+}
+@media screen and (min-width:600px) and (max-width:1000px){
+    .column{
+        width:50%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .card{
+        margin: auto;
+    }
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    max-width: 500px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 40px;
+    padding-bottom: 15px;
+
+
+}
+.title
+{
+    color:gray;
+    font-size: 18px;
+}
+button{
+    border:none;
+    padding: 8px;
+    color: #fff;
+    background-color: #333;
+    cursor: pointer;
+    width: 70%;
+    border-radius: 20px;
+    font-size: 18px;
+}
+button:hover{
+    opacity: 0.8;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+
+}
+
+section{
+    padding: 0 50px 0 50px;
+}
+
+/* The Mentor Details */
+.wrapper{
+    width: 100%;
+    margin-top: 30px;
+}
+.mentor-img{
+    float: left;
+    width: 50%;
+    padding-left: 40px;
+    margin-bottom: 70px;
+    border-radius: 40px;
+    box-shadow: 6px solid #333;
+    background-color:#e0dfdf;
+    
+}
+.mentor-img img{
+    width: 1200px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px; 
+}
+.description{
+    float: right;
+    width: 40%;
+    background-color:#f7f7f7;
+    border-radius: 30px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.description hr{
+    border: 1px solid #333;
+}
+.description div{
+    padding: 0 20px 0 20px;
+}
+.description h3{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.description div{
+    padding-top: 2px;
+}
+.description div label{
+    margin-right: 300px;
+    float: left;
+    line-height: 1.6;
+}
+.description span{
+    float: right;
+    padding-top: -1px;
     
 }
 
+@media screen and (max-width:600px){
+    .wrapper{
+        width: 100%;
+        display: block;
+    }
+    .mentor-img{
+        width: 100%;
+    }
+    .description{
+        width: 100%;
+    }
+    
+}
+/* Form for the Mentorship Session */
 /* Form */
+.session{
+    width: 80%;
+    margin: auto;
+    width: 100%;
+}
+
 .f-form{
     background-color: #fff;
     border-radius: 20px;
     padding: 16px;
 }
+.f-form h2{
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+}
 .f-form h3{
     font-weight: 700;
     font-size: 30px;
 }
+.f-form h4{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 9px;
+}
 .f-form label{
     font-size: 18px;
     font-weight: 200px; 
+}
+.f-form p{
+    text-align: center;
 }
 .f-form p a{
     text-decoration: none;
     color: #333;
     opacity: 0.9;
 }
-.f-form input[type="text"],.f-form input[type="password"],.f-form input[type="email"]{
+.f-form input[type="text"],.f-form input[type="password"],.f-form input[type="email"],
+.f-form textarea{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -40,6 +332,7 @@ body{
     box-sizing: border-box;
     border-radius: 4px;
 }
+
 .button_1{
     background-color: #333;
     color: white;
@@ -56,12 +349,119 @@ body{
     opacity: 0.8;
 }
 
-
-@media screen and (max-width:823px){
-    .container{
-        margin-top: 50px;
-        padding: 0 20px 0 20px;
-        
-    }
+/* Admin */
+.grid-container{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 17%;
+    grid-gap: 10px;
+    background-color: #ccc;
+    border-radius: 20px;
+    padding: 10px;
     
 }
+.admin-header{
+    background-color:#f7f7f7;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 7px;
+    padding: 10px;
+}
+.grid-item{
+    display: grid;
+    grid-gap: 10px;
+    background-color:#e0dfdf;
+    padding: 10px;
+    border-radius: 7px;
+}
+.mentor-btn{
+    width: 100%;
+}
+.admin-container{
+    height: 100vh;
+
+}
+/* Admin Approval */
+.admin-grid-container{
+    display: grid;
+    grid-template-columns: 13% 13% 20% 15% 15% 13% 7%;
+    grid-gap: 10px;
+    background-color: #ccc;
+    border-radius: 20px;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+}
+.item{
+    font-size: 18px;
+}
+.accept-btn{
+    width: 100%;
+    padding: 2px;
+    height: 30px;
+    font-size: 15px;
+}
+.deny-btn{
+    width: 100%;
+    padding: 2px;
+    height: 30px;
+    font-size: 15px;
+    background-color: red;
+}
+
+
+@media screen and (min-width:100px) and (max-width:1359px){
+    .container{
+        width: 100%;
+    }
+    .grid-container{
+        padding: 10px;
+        display: block;
+        position: relative;
+    }
+    .admin-header{
+        border-radius: 7px;
+        padding: 10px;
+        display: block;
+        margin: 5px 10px;
+    }
+    .grid-item{
+        display: grid;
+        display: block;
+        margin:10px;
+    }
+    .mentor-btn{
+        width: 100%;
+    }
+
+    /* Session Approval */
+    .admin-grid-container{
+        display: block;
+    }
+    .item{
+        font-size: 14px;
+    }
+    .accept-btn{
+        width: 100%;
+        padding: 2px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .deny-btn{
+        margin-top: 2px; 
+        width: 100%;
+        background-color: red;
+    }
+
+}
+/* footer */
+footer{
+    background-color: #333;
+    clear: both;
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
