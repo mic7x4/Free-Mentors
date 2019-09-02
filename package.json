@@ -1,0 +1,50 @@
+{
+  "name": "Free-Mentors",
+  "version": "1.0.0",
+  "description": "Free Mentors is a social initiative where accomplished professionals become role models to young people to provide free mentorship sessions.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mic7x4/Free-Mentors.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mic7x4/Free-Mentors/issues"
+  },
+  "homepage": "https://github.com/mic7x4/Free-Mentors#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "coveralls": "^3.0.6",
+    "dotenv": "^8.1.0",
+    "express-validator": "^6.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^6.2.0",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "nodemon": "*",
+    "nyc": "^14.1.1",
+    "swagger": "^0.7.5"
+  },
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}
