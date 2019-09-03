@@ -262,12 +262,19 @@ section{
 }
 .description div{
     padding-top: 2px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-left: 30px;
 }
-.description div label{
-    margin-right: 300px;
-    float: left;
-    line-height: 1.6;
+.name{
+    margin-left: 20px;
+    color: green;
+    font-weight: 2em;
+
 }
+/* .description div label{
+    line-height: 1.6; */
+
 /* .description span{
     float: right;
     padding-top: -1px;
@@ -277,6 +284,7 @@ section{
     padding: 0;
     text-align: center;  
     margin-right: 20px;
+    margin-left: 0px;
 }
 .description p button{
     width: 90%;
