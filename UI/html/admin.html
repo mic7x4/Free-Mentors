@@ -38,7 +38,7 @@
                 <div class="grid-item">mic7x4@gmail.com</div>
                 <div class="grid-item">Kigali Rwanda</div>
                 <div class="grid-item">
-                    <button class="mentor-btn">Mentor</button>
+                    <button class="mentor-btn">User</button>
                 </div>
 
                 <div class="grid-item">Ndabaga</div>
@@ -46,7 +46,7 @@
                 <div class="grid-item">mic7x4@gmail.com</div>
                 <div class="grid-item">Kigali Rwanda</div>
                 <div class="grid-item">
-                    <button class="mentor-btn">Mentor</button>
+                    <button class="mentor-btn">User</button>
                 </div>
 
                 <div class="grid-item">Ndabaga</div>
@@ -54,7 +54,7 @@
                 <div class="grid-item">mic7x4@gmail.com</div>
                 <div class="grid-item">Kigali Rwanda</div>
                 <div class="grid-item">
-                    <button class="mentor-btn">Mentor</button>
+                    <button class="mentor-btn">User</button>
                 </div>
 
                 <div class="grid-item">Ndabaga</div>
@@ -62,7 +62,7 @@
                 <div class="grid-item">mic7x4@gmail.com</div>
                 <div class="grid-item">Kigali Rwanda</div>
                 <div class="grid-item">
-                    <button class="mentor-btn">Mentor</button>
+                    <button class="mentor-btn">User</button>
                 </div>
 
                 <div class="grid-item">Ndabaga</div>
@@ -70,15 +70,48 @@
                 <div class="grid-item">mic7x4@gmail.com</div>
                 <div class="grid-item">Kigali Rwanda</div>
                 <div class="grid-item">
-                    <button class="mentor-btn">Mentor</button>
+                    <button class="mentor-btn five" onclick="userToMentor();">User</button>
                 </div>
                 
             </div>
         </form>
     </div>
 </section>
-<footer >
-        Copyright &copy; All rights Reserved Free Mentors
-</footer>
+<!-- Site maps -->
+<div class="sitesmap">
+        <div class="sitesmap_container">
+            <ul>
+            <li>
+                <a href="../index.html"> <h1>Free Mentor</h1> </a><br>
+                    <p>
+                        Is a place where you can meet a Mentor , 
+                        meentees and meet nice people throught the Mentoring sessions
+                        The best part!!! its all free !!
+                    </p>
+            </li>
+            <li><a href="../index.html"><h3>Find Mentor</h3></a><br>
+                <p>
+                    Here you can signin and be a member so that you can 
+                    Request the mentorship session
+                </p>
+            </li> 
+            <li>
+                <a href="../index.html"><h3>Request Session</h3></a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        nisi quae in repellat necessitatibus officiis placeat.
+                    </p>
+
+            </li>
+            </ul>
+    
+        </div>
+    </div>
+<script>
+function userToMentor(){
+    const user = document.querySelector('.five');
+    user.innerHTML = "Mentor";
+    alert('User changed to mentor');
+}
+</script>
 </body>
 </html>
