@@ -446,123 +446,123 @@ section{
         width: 100%;
     }
 
-    /* Session Approval */
-    .admin-grid-container{
-        display: block;
-    }
-    .item{
-        font-size: 14px;
-    }
-    .accept-btn{
-        width: 100%;
-        padding: 2px;
-        height: 30px;
-        font-size: 15px;
-    }
-    .deny-btn{
-        margin-top: 2px; 
-        width: 100%;
-        background-color: red;
-    }
-    footer.admin{
-        margin-top:calc(150vh - 20%);
+        /* Session Approval */
+        .admin-grid-container{
+            display: block;
+        }
+        .item{
+            font-size: 14px;
+        }
+        .accept-btn{
+            width: 100%;
+            padding: 2px;
+            height: 30px;
+            font-size: 15px;
+        }
+        .deny-btn{
+            margin-top: 2px; 
+            width: 100%;
+            background-color: red;
+        }
+        footer.admin{
+            margin-top:calc(150vh - 20%);
+        }
+
     }
 
-}
 
-
-/* footer */
-footer{
-    background-color: #333;
-    clear: both;
-    margin-top: 20px;
-    color: #ffffff;
-    text-align: center;
-    width: 100%;
-    position: relative;
-    height: auto;
-    bottom: 0;
-}
-footer.login{
-    margin-top:calc(60vh - 20%);
-}
-
-/* Sitemaps */
-
-.sitemap p{
-    font-size: .9em;
-    line-height: 1.6em;
-}
-
-ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.sitesmap_container{
-    text-align: center;
-    padding: .8em;
-}
-.sitesmap{
-    width: 100%;
-    background: #333;
-    color:#fff;
-    margin-top: 10%;
-    padding: 8em 0;
-}
-
-.sitesmap ul li{
-    margin-bottom: 3em;
-}
-.sitesmap ul li p{
-    padding: 0 .5em;
-}
-.sitesmap a{
-    width: 14%;
-}
-
-@media only screen and (min-width:650px){
-    .sitemap a{
-        width: 40%;
-    }
-    .sitesmap{
-        margin: 0;
-    }
-    .sitesmap ul{
-        display: flex;
-        margin-top: -1em;
-        align-items: center;
-    }
-    .sitesmap ul li{
-        margin-bottom: 0px;
-    }
-    .sitesmap ul li p{
-        padding: 0 .8em;
-    }
-}
-@media only screen and (min-width:768px){
-    .sitesmap{
-        padding: 1em 0 2em;
-        margin-top:200px;
-    }
-}
-@media only screen and (max-width:1024px){
-    .sitesmap{
-        padding: 1em 0 2em;
-        margin-top:400px;
-    }
-}
-@media only screen and (min-width: 1600px){
-    .sitesmap{
-        padding: 1em 0 2em;
-        margin-top:200px;
-    }
-    .sitesmap ul li p{
-        font-size: 1.3em;
-        padding-top: 0 2px;
-    }
+    /* footer */
     footer{
-        color: yellow;
+        background-color: #333;
+        clear: both;
+        margin-top: 20px;
+        color: #ffffff;
+        text-align: center;
+        width: 100%;
+        position: relative;
+        height: auto;
+        bottom: 0;
     }
-}
+    footer.login{
+        margin-top:calc(60vh - 20%);
+    }
+
+    /* Sitemaps */
+
+    .sitemap p{
+        font-size: .9em;
+        line-height: 1.6em;
+    }
+
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sitesmap_container{
+        text-align: center;
+        padding: .8em;
+    }
+    .sitesmap{
+        width: 100%;
+        background: #333;
+        color:#fff;
+        margin-top: 10%;
+        padding: 8em 0;
+    }
+
+    .sitesmap ul li{
+        margin-bottom: 3em;
+    }
+    .sitesmap ul li p{
+        padding: 0 .5em;
+    }
+    .sitesmap a{
+        width: 14%;
+    }
+
+    @media only screen and (min-width:650px){
+        .sitemap a{
+            width: 40%;
+        }
+        .sitesmap{
+            margin: 0;
+        }
+        .sitesmap ul{
+            display: flex;
+            margin-top: -1em;
+            align-items: center;
+        }
+        .sitesmap ul li{
+            margin-bottom: 0px;
+        }
+        .sitesmap ul li p{
+            padding: 0 .8em;
+        }
+    }
+    @media only screen and (min-width:768px){
+        .sitesmap{
+            padding: 1em 0 2em;
+            margin-top:200px;
+        }
+    }
+    @media only screen and (max-width:1024px){
+        .sitesmap{
+            padding: 1em 0 2em;
+            margin-top:400px;
+        }
+    }
+    @media only screen and (min-width: 1600px){
+        .sitesmap{
+            padding: 1em 0 2em;
+            margin-top:200px;
+        }
+        .sitesmap ul li p{
+            font-size: 1.3em;
+            padding-top: 0 2px;
+        }
+        footer{
+            color: yellow;
+        }
+    }
