@@ -57,6 +57,25 @@ class UsersController {
       message: 'User not Found',
     });
   }
+
+  // Change user to Mentor
+  static userToMentor(req, res) {
+    const findUser = Users.find((usr) => usr.id == req.params.id);
+    if (findUser) {
+      findUser.isMentor = true;
+      return res.status(200).json({
+        status: 200,
+        data: {
+          message: 'User account changed to mentor',
+          user: findUser,
+        },
+      });
+    }
+    return res.status(404).json({
+      status: 404,
+      error: 'user not found',
+    });
+  }
 }
 
 export default UsersController;
