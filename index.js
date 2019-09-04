@@ -8,6 +8,6 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/api/v1', usersRouter);
 app.use('/api/v1', mentorsRouter);
-const PORT = process.env.PORT || 2000;
+const PORT = process.env.PORT || 9000;
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
 export default app;
