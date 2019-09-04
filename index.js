@@ -1,12 +1,13 @@
 import express from 'express';
 import usersRouter from './server/routes/usersRoutes';
+import mentorsRouter from './server/routes/mentorsRoutes';
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/api/v1', usersRouter);
-
-const PORT = process.env.PORT || 5000;
+app.use('/api/v1', mentorsRouter);
+const PORT = process.env.PORT || 2000;
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
 export default app;
