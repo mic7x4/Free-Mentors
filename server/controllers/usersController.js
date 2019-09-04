@@ -28,12 +28,11 @@ class UsersController {
     user.token = userToken;
     user.message = 'User created successfully';
     Users.push(user);
+
     return res.status(201).json({
       status: 201,
       message: 'User created successfully',
-      data: {
-        token: user,
-      },
+      data: user,
     });
   }
 
@@ -60,7 +59,8 @@ class UsersController {
 
   // Change user to Mentor
   static userToMentor(req, res) {
-    const findUser = Users.find((usr) => usr.id == req.params.id);
+    const userId = parseInt(req.params.id, 10);
+    const findUser = Users.find((usr) => usr.id === userId);
     if (findUser) {
       findUser.isMentor = true;
       return res.status(200).json({

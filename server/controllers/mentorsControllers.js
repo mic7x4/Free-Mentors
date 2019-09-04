@@ -11,7 +11,8 @@ class MentorsController {
 
   // view specific mentor
   static ViewMentorDetail(req, res) {
-    const findMentor = Mentors.find((mentor) => mentor.id == req.params.id);
+    const mentorId = parseInt(req.params.id, 10);
+    const findMentor = Mentors.find((mentor) => mentor.id === mentorId);
     if (findMentor) {
       return res.status(200).json({
         status: 200,
