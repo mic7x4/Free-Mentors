@@ -34,7 +34,23 @@ class SessionsController {
       error: 'Not created',
     });
   }
-}
 
+  // Reject the Mentorship Session
+  static rejectSession(req, res) {
+    const sessionId = parseInt(req.params.id, 10);
+    const findSession = Sessions.find((session) => session.id === sessionId);
+    if (findSession) {
+      findSession.session_status = 'rejected';
+      return res.status(200).json({
+        status: 200,
+        data: findSession,
+      });
+    }
+    return res.send(204).json({
+      status: 204,
+      error: 'Not created',
+    });
+  }
+}
 
 export default SessionsController;
