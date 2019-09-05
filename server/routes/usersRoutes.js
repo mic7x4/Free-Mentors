@@ -8,5 +8,7 @@ const usersRoute = express.Router();
 usersRoute.post('/auth/signup', UsersController.userSignUp);
 // User can signin
 usersRoute.post('/auth/signin', UsersController.userSignIn);
+// Change user to the Mentor
+usersRoute.patch('/user/:id', UsersController.userToMentor);
 
 export default usersRoute;
