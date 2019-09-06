@@ -46,8 +46,8 @@ class SessionsController {
         data: findSession,
       });
     }
-    return res.send(204).json({
-      status: 204,
+    return res.send(404).json({
+      status: 404,
       error: 'Not created',
     });
   }
