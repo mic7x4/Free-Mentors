@@ -8,7 +8,7 @@ require('dotenv').config();
 const { JWT_SECRET } = process.env;
 
 class UsersController {
-  // User can sign up
+  // User can sign
   static userSignUp(req, res) {
     const {
       firstname, lastname, email, password, address, occupation, expertise,
