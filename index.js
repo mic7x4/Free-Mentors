@@ -7,9 +7,9 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use('/api/v1', usersRouter);
-app.use('/api/v1', mentorsRouter);
-app.use('/api/v1', sessionsRoute);
+app.use('/api/v2', usersRouter);
+app.use('/api/v2', mentorsRouter);
+app.use('/api/v2', sessionsRoute);
 app.use('*', (req, res) => {
   res.status(400).json({
     status: res.statusCode,
@@ -30,7 +30,7 @@ app.use((error, req, res) => {
   });
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8889;
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
 
 export default app;
