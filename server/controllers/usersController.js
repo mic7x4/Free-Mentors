@@ -1,82 +1,65 @@
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
-import Users from '../model/users';
-
+import pool from '../database/querries';
 
 require('dotenv').config();
 
 const { JWT_SECRET } = process.env;
 
 class UsersController {
-  // User can sign
   static userSignUp(req, res) {
-    const {
-      firstname, lastname, email, password, address, occupation, expertise,
-    } = req.body;
-    const user = {
-      id: Users.length + 1,
-      firstname,
-      lastname,
-      email,
-      password,
-      address,
-      occupation,
-      expertise,
-      isAdmin: false,
-      isMentor: false,
-    };
-    const userToken = jwt.sign({ email }, JWT_SECRET, {});
-    user.token = userToken;
-    bcrypt.hash(user.password, 10, (err, hash) => {
-      // eslint-disable-next-line no-empty
-      if (err) {
-        return res.status(404).json({
-          error: 'Not created',
+    pool.connect((err, client, done) => {
+      const email = req.body;
+      const selectUser = `SELECT * FROM users WHERE email = $1`;
+      console.log(selectUser);
+      const value = [email];
+      client.query(selectUser, value, ((error, result) => {
+        if (error) {
+          return res.status(404).json({
+            error: 'user not found',
+          });
+        }
+        if (result.rows[0]) {
+          return res.status(409).json({
+            status: 409,
+            error: 'User exists',
+          });
+        }
+        const {
+          firstname, lastname, email, password, address, bio, occupation, expertise,
+        } = req.body;
+        bcrypt.hash(password, 10, (err, hash) => {
+          const passwd = hash;
+          const insertQuery = 'INSERT INTO users (firstname,lastname,email,password,address,bio,occupation,expertise) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)';
+          const user = [firstname, lastname, email, password, address, bio, occupation, expertise];
+          client.query(insertQuery, user, (results) => {
+            if (results) {
+              const userToken = jwt.sign({ email }, JWT_SECRET, { expiresIn: '24h' });
+              return res.status(201).json({
+                status: 201,
+                message: 'User created',
+                data: {
+                  firstname,
+                  lastname,
+                  email,
+                  passwd,
+                  bio,
+                  occupation,
+                  expertise,
+                },
+                userToken,
+              });
+            }
+          });
         });
-      }
-      user.password = hash;
-      Users.push(user);
-      return res.status(201).json({
-        status: 201,
-        message: 'User created successfully',
-        data: {
-          firstname: user.firstname,
-          lastname: user.lastname,
-          email: user.email,
-          address: user.address,
-          occupation: user.occupation,
-          expertise: user.expertise,
-          isAdmin: user.isAdmin,
-          isMentor: user.isMentor,
-        },
-      });
+      }),
+      done());
     });
   }
 
-  // User can sign in
   static userSignIn(req, res) {
-    const { email } = req.body;
-    const { password } = req.body;
-    const user = Users.find((u) => u.email === email && u.password === password);
-    if (user.length >= 1) {
-      return res.status(401).json({
-        error: 'Not authorized',
-      });
-    }
-    const userToken = jwt.sign({ email }, JWT_SECRET, { expiresIn: '24h' });
-    user.token = userToken;
-    return res.status(200).json({
-      status: 200,
-      message: 'User is successfully logged in',
-      data: {
-        token: userToken,
-        id: user.id,
-        firstname: user.firstname,
-        lastname: user.lastname,
-        email: user.email,
-        bio: user.bio,
-      },
-    });
+    res.send('This is the sign in ');
   }
 }
+
 export default UsersController;
